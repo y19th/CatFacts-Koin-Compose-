@@ -2,4 +2,5 @@
     <string name="app_name">CatFacts</string>
     <string name="random_fact">Случайный факт</string>
     <string name="fact_lenght">Длина факта %1d</string>
+    <string name="all_facts">Все факты</string>
 </resources>

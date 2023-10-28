@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -38,11 +39,22 @@ fun FactsScreen() {
         item {
             Text(
                 text = stringResource(id = R.string.random_fact),
-                style = Typography.bodyMedium
+                style = Typography.bodyMedium,
+                modifier = Modifier.padding(vertical = 8.dp)
             )
         }
         items(state.value.factsList) {
             FactItem(item = it)
+        }
+        item {
+            Text(
+                text = stringResource(id = R.string.all_facts),
+                style = Typography.bodyMedium,
+                modifier = Modifier.padding(vertical = 8.dp)
+            )
+        }
+        items(10) {
+            FactItem(item = Facts(fact = "fact $it"))
         }
     }
 }
@@ -52,6 +64,7 @@ fun FactItem(item: Facts) {
     Column(
         modifier = Modifier
             .background(Color.White, RoundedCornerShape(16.dp))
+            .fillMaxWidth()
             .padding(16.dp)
     ) {
         Text(
