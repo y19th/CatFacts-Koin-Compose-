@@ -19,6 +19,12 @@ val Typography = Typography(
         fontWeight = FontWeight(400),
         fontSize = 10.sp,
         letterSpacing = 0.22.sp
+    ),
+    titleLarge = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight(600),
+        fontSize = 16.sp,
+        letterSpacing = 0.22.sp
     )
     /* Other default text styles to override
     titleLarge = TextStyle(

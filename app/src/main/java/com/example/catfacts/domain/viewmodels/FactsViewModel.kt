@@ -72,7 +72,7 @@ class FactsViewModel : BaseViewModel<FactsState>(FactsState()) {
                 },
                 onError = {
                     Log.i(TAG,"onError throwed $it")
-                    onError()
+                    onNetworkError()
                 }
             )
         }
@@ -104,7 +104,7 @@ class FactsViewModel : BaseViewModel<FactsState>(FactsState()) {
                 },
                 onError = {
                     Log.i(TAG,"onError throwed $it")
-                    onError()
+                    onNetworkError()
                 }
             )
         }
