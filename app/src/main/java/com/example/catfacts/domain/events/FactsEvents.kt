@@ -1,5 +1,5 @@
 package com.example.catfacts.domain.events
 
-sealed class FactsEvents (
-
-)
+sealed interface FactsEvents {
+    data object OnShowMore: FactsEvents
+}
